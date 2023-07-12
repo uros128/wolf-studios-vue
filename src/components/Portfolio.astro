@@ -1,0 +1,18 @@
+---
+import { getCollection, getEntry } from "astro:content";
+
+const portfolio = await getCollection("portfolio");
+---
+
+<ul>
+    {
+        portfolio.map((p) => (
+            <li>
+                {p.data.title}
+                <img src={"/images/portfolio/" + p.data.heroImage} />
+
+                <button />
+            </li>
+        ))
+    }
+</ul>

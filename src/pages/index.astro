@@ -1,5 +1,10 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import Portfolio from "../components/Portfolio.astro";
+import SlidePanel from "../components/SlidePanel.vue";
+import Hero from "../components/Hero.vue";
+
+const isPanelOpen = false;
 ---
 
 <!DOCTYPE html>
@@ -10,6 +15,12 @@ import BaseHead from "../components/BaseHead.astro";
 	<body>
 		<main class="bg-uros-200">
 			<h1 class="text-3xl font-bold text-uros-600">Test</h1>
+			<button onclick="
+			isPanelOpen = true
+">Open</button>
 		</main>
+		<SlidePanel client:load>
+			<Portfolio />
+		</SlidePanel>
 	</body>
 </html>
